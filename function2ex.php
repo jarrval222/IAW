@@ -6,11 +6,13 @@ function perimeter($base, $height){
     return $base *2 + $height *2;
 }
 function interchange(&$base, &$height){
-    $height2=$base;
+    $auxiliary=$base;
     $base=$height;
+    $height=$auxiliary;
 }
 $base = 5;
 $height = 7;
-echo "<div>", area($base, $height), "<div>";
-echo "<div>", perimeter($base, $height), "<div>";
-echo "<div>", $base, $height2, "<div>";
+echo "<div> The area is ", area($base, $height), "<div>";
+echo "<div> The perimeter is ", perimeter($base, $height), "<div>";
+interchange($base, $height);
+echo "<div> The base now is ", $base, " and the height is ", $height, "<div>";
