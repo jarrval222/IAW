@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+</head>
+<body>
+    <form action="ex1.php" method="post">
+        <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" name="name"/>
+            <label for="mail" >Email:</label>
+            <input type="email" name="mail"/>
+            <input type="submit" value="Submit"/>
+        </fieldset>
+        <fieldset>
+        <select name="rol[]" multiple required>
+            <option value="student">student</option>
+            <option value="teacher">teacher</option>
+            <option value="service staff">service staff</option>
+        </select>
+    </fieldset>
+    </form>
+</body>
+</html>
