@@ -1,5 +1,6 @@
 <?php
 include 'config.php';
+$db = "project";
 $pdo->exec("USE $db");
 
 // Acciones: Crear, Editar, Eliminar
