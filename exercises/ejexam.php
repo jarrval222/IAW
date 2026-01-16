@@ -2,7 +2,7 @@
 // Función para cambiar el formato del nombre ("Apellido, Nombre" → "Nombre Apellido")
 function cambiarNombre($nombre) { // "Apellido, Nombre"
     $partes = explode(', ', $nombre);
-    return $partes[1] . ' ' . $partes[0]; // "Nombre Apellido"
+    return $partes[1] . ' ' . $partes[0];    // "Nombre Apellido"
 }
 
 // Array de estudiantes sin índices

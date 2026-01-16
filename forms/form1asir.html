@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="UTF-8"/>
+    <title> Telebirria </title>
+</head>
+<body>
+    <h1>TELEBIRRIA</h1>
+    <h2>TO PLACE YOUR ORDER, FILL OUT THE FORM</h2>
+
+    <form action="form2asir.php" method="post">
+    
+    <fieldset>
+        <legend>Personal Information and Delivery</legend>
+        <div><label>First Name* </label><input type="text" required="required" name="FirstName"/></div>
+        <div><label>Last Name* </label><input type="text" name="LastName" required="required"/></div>
+        <div><label>Address* </label><input type="text" name="Address" required="required"/></div>
+        <div><label>City* </label><input type="text" name="City" required="required"/></div>
+        <div><label>Postal Code* </label><input type="number" min="1000" max="52999" name="PostalCode" required="required"/></div>
+        <div><label>Phone* </label><input type="tel" name="Phone" required="required"/></div>
+        <div><label>Email </label><input type="email" name="Email"/></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Select Delivery Option</legend>
+        <div><input id="pickup_local" type="radio" name="delivery" checked="checked" value="pickup"/><label for="pickup_local">Pick up at the restaurant</label></div>
+        <div><input id="home_delivery" type="radio" name="delivery" value="home"/><label for="home_delivery">Home delivery</label></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Would you like to receive our offers?</legend>
+        <div><input id="offers_home" type="checkbox" name="home_offer" checked="checked" value="home"/> 
+        <label for="offers_home">Send to home</label></div>
+
+        <div><input id="offers_email" type="checkbox" name="email_offer" checked="checked" value="email"/> 
+        <label for="offers_email">Send by email</label></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Select Your Menu</legend>
+
+        <div><label>Sandwich Size</label></div>
+        <select size="4" name="Size">
+            <option value="small">Small - 4€</option>
+            <option value="medium" selected="selected">Medium - 6€</option>
+            <option value="large">Large - 7.5€</option>
+            <option value="enormous">Extra Large - 9€</option>
+        </select>
+
+        <div><label>Ingredients</label></div>
+        <select multiple="multiple" size="4" name="Ingredients[]">
+            <option value="anchovies">Anchovies - 1€</option>
+            <option value="squid">Squid - 1.5€</option>
+            <option value="mussels">Mussels - 1€</option>
+            <option value="ham">Ham - 1.2€</option>
+            <option value="omelette">Omelette - 0.8€</option>
+            <option value="cheese">Cheese - 0.8€</option>
+            <option value="meat_sauce">Meat in sauce - 2€</option>
+            <option value="pork_loin">Pork loin - 1.2€</option>
+            <option value="bacon">Bacon - 1€</option>
+            <option value="giraffe">Giraffe - 100€</option>
+        </select>
+
+        <div><label>Add any suggestion</label></div>
+        <textarea rows="8" cols="50" name="suggestions" placeholder="For example: gluten-free..."></textarea>
+    </fieldset>
+
+    <input type="submit" value="Submit Form"/>
+    </form>
+</body>
+</html>

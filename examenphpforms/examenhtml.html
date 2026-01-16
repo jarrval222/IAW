@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Exam 1</title>
+</head>
+<body>
+<form action="examenhtml2.php" method="post">
+    <fieldset>
+        <legend>Date of the visit</legend>
+        <div>
+            <label>Date:</label>
+            <input type="date" name="date" required>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Kind of visit</legend>
+        <div>
+            <input type="radio" name="kind" value="Standard" required>
+            <label>Standard</label>
+        </div>
+        <div>
+            <input type="radio" name="kind" value="Dramatized" required>
+            <label>Dramatized</label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <div>
+            <input type="submit" value="Next page">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
