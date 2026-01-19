@@ -3,7 +3,7 @@ include 'config.php'; // Conecta a la DB
 
 // --- LÓGICA DE ACCIONES (POST y GET) ---
 if (isset($_POST['add_org'])) {
-    $pdo->prepare("INSERT INTO organizers (name, email) VALUES (?,?)")->execute([$_POST['name'], $_POST['email']]);
+    $pdo->prepare("INSERT INTO organizers (name, email, phone) VALUES (?,?)")->execute([$_POST['name'], $_POST['email'], $_POST['phone']]);
 }
 if (isset($_POST['add_event'])) {
     $pdo->prepare("INSERT INTO events (name, date, id_organizer) VALUES (?,?,?)")->execute([$_POST['name'], $_POST['date'], $_POST['id_org']]);
@@ -13,6 +13,9 @@ if (isset($_POST['add_att'])) {
 }
 if (isset($_GET['del_event'])) {
     $pdo->prepare("DELETE FROM events WHERE id_event = ?")->execute([$_GET['del_event']]);
+}
+if (isset(_POST['button_name'])){
+    pdo->prepare("in/up/del into/from table ") -> execute([_POST/_GET['']]);
 }
 
 // Consulta de Eventos con su Organizador (Punto 3.1 de la imagen)
@@ -31,6 +34,7 @@ $orgs = $pdo->query("SELECT * FROM organizers")->fetchAll();
         <form method="POST">
             <input type="text" name="name" placeholder="Nombre" required>
             <input type="email" name="email" placeholder="Email">
+            <input type="tel" name="phone" placeholder="Phone">
             <button name="add_org">Guardar</button>
         </form>
 
